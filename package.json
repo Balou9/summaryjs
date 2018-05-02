@@ -1,0 +1,26 @@
+{
+  "name": "summaryjs",
+  "version": "0.0.0",
+  "description": "Basic summary",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Balou9/summaryjs.git"
+  },
+  "keywords": [
+    "summary",
+    "min",
+    "max",
+    "median",
+    "quartile",
+    "sum"
+  ],
+  "author": "Emmanuel Owosekun",
+  "license": "MIT",
+  "dependencies": {
+    "tape": "^4.9.0"
+  }
+}
