@@ -1,5 +1,22 @@
 function summary (arr) {
   var N = arr.length
+  // better opts
+  function quartiles (opt, arr) {
+    var index = 0
+    if (opt === 'first') {
+      index = N * 0.25
+    }
+    if (opt === 'third') {
+      index =  N * 0.75
+    }
+    if (index % 1 !== 0) {
+      return (arr[index - 0.5] + arr[index + 0.5]) / 2
+    }
+    else {
+      return arr[index]
+    }
+  }
+
   function median (arr) {
     if (N % 2 === 0){
       var med = 1/2 * (arr[N/2] + arr[N/2+1])
@@ -18,21 +35,6 @@ function summary (arr) {
     return result
   }
 
-  function quartiles (opt, arr) {
-    var index = 0
-    if (opt === 'first') {
-      index = N * 0.25
-    }
-    if (opt === 'third') {
-      index =  N * 0.75
-    }
-     if (index % 1 !== 0) {
-     return (arr[index - 0.5] + arr[index + 0.5]) / 2
-     }
-     else {
-       return arr[index]
-     }
-  }
   arr.sort(function (a,b){
     return a - b
   })
